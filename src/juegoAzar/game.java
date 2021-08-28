@@ -136,13 +136,9 @@ public class game extends javax.swing.JFrame {
     }
     
     public void showStats(){
-        
-        
         //Sending all the info
         new stats(mainAccount.getArray()).setVisible(true);
         setVisible(false);
-        
-        
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -436,11 +432,18 @@ public class game extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
-        // TODO add your handling code here:
+        setVisible(false);
     }//GEN-LAST:event_btnExitActionPerformed
 
     private void btnNewGameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNewGameActionPerformed
-        // TODO add your handling code here:
+        lblBetOne.setText("100");
+        lblBetTwo.setText("100");
+        lblRound.setText("0");
+        lblWinnerOne.setText("");
+        lblWinnerTwo.setText("");
+        lblResultOne.setText("0");
+        lblResultTwo.setText("0");
+        btnPlay.setEnabled(true);
     }//GEN-LAST:event_btnNewGameActionPerformed
 
     private void btnPlayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlayActionPerformed
@@ -541,7 +544,6 @@ public class game extends javax.swing.JFrame {
                                          + "             "+ lblResultTwo.getText() +"   Q"+lblBetTwo.getText();
                 mainAccount.setArray(dataGame, 9);
         }
-        
         
     }//GEN-LAST:event_btnPlayActionPerformed
 
