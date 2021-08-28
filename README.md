@@ -14,3 +14,4 @@ Otras características:
 - Puedes salirte de la partida cuando quieras.
 
 ![alt text](https://github.com/rodrizo/diceGame/blob/master/ss/game1.png)
+![alt text](https://github.com/rodrizo/diceGame/blob/master/ss/game2.png)
