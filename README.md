@@ -9,7 +9,7 @@ Realiza las siguientes funciones:
 - Comparar resultados a ver quién gana cada ronda
 - Al pasar 10 rondas, el juego termina
 
-Funciones pendientes:
-- Habilitar el botón de Mostrar, para imprimir las estadísticas de cada ronda (desarrollado en un 50%)
-- Ediciones menores
-- Mejoramiento de UI
+Otras características:
+- Puedes iniciar otra partida desde 0
+- Puedes salirte de la partida cuando quieras.
+
