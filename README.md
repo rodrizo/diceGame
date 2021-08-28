@@ -1,5 +1,5 @@
 # DiceGame
-Juego multiplayer realizado en un 80%
+Juego multiplayer
 
 Ambos jugadores inician con saldo de Q100
 
