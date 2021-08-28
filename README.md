@@ -13,4 +13,4 @@ Otras características:
 - Puedes iniciar otra partida desde 0
 - Puedes salirte de la partida cuando quieras.
 
-https://github.com/rodrizo/diceGame/blob/master/ss/game1.png
+![alt text](https://github.com/rodrizo/diceGame/README.me/master/game1.png?raw=true)
