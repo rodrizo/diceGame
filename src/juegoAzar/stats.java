@@ -9,14 +9,30 @@ package juegoAzar;
  *
  * @author Rodney Rizo
  */
-public class stats extends javax.swing.JInternalFrame {
+public class stats extends javax.swing.JFrame {
 
     /**
-     * Creates new form Stats
+     * Creates new form statsGame
      */
     public stats() {
         initComponents();
     }
+    
+    public stats(String[] array) {
+        initComponents();
+        
+        lblOne.setText(array[0]);
+        lblTwo.setText(array[1]);
+        lblThree.setText(array[2]);
+        lblFour.setText(array[3]);
+        lblFive.setText(array[4]);
+        lblSix.setText(array[5]);
+        lblSeven.setText(array[6]);
+        lblEight.setText(array[7]);
+        lblNine.setText(array[8]);
+        lblTen.setText(array[9]);
+    }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -31,62 +47,212 @@ public class stats extends javax.swing.JInternalFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        lblTwo = new javax.swing.JLabel();
+        lblOne = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        lblSix = new javax.swing.JLabel();
+        lblFive = new javax.swing.JLabel();
+        lblEight = new javax.swing.JLabel();
+        lblFour = new javax.swing.JLabel();
+        lblThree = new javax.swing.JLabel();
+        lblNine = new javax.swing.JLabel();
+        lblTen = new javax.swing.JLabel();
+        lblSeven = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Estadísticas");
+
+        jPanel1.setBackground(new java.awt.Color(193, 207, 192));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(17, 50, 77));
         jLabel1.setText("Jugador 2");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 10, -1, 27));
 
         jLabel2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(17, 50, 77));
         jLabel2.setText("Partida");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, 67, 27));
 
         jLabel3.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(17, 50, 77));
         jLabel3.setText("Jugador 1");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 10, -1, 27));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(54, 54, 54)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 133, Short.MAX_VALUE)
-                .addComponent(jLabel3)
-                .addGap(114, 114, 114)
-                .addComponent(jLabel1)
-                .addGap(68, 68, 68))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(392, Short.MAX_VALUE))
-        );
+        lblTwo.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        lblTwo.setForeground(new java.awt.Color(17, 50, 77));
+        lblTwo.setText("jLabel4");
+        jPanel1.add(lblTwo, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 80, 380, 29));
+
+        lblOne.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        lblOne.setForeground(new java.awt.Color(17, 50, 77));
+        lblOne.setText("jLabel4");
+        jPanel1.add(lblOne, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 40, 380, 29));
+
+        jLabel4.setForeground(new java.awt.Color(17, 50, 77));
+        jLabel4.setText("1");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 50, 41, -1));
+
+        jLabel5.setForeground(new java.awt.Color(17, 50, 77));
+        jLabel5.setText("2");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, 41, -1));
+
+        jLabel6.setForeground(new java.awt.Color(17, 50, 77));
+        jLabel6.setText("3");
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 130, 41, -1));
+
+        jLabel7.setForeground(new java.awt.Color(17, 50, 77));
+        jLabel7.setText("10");
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 410, 41, -1));
+
+        lblSix.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        lblSix.setForeground(new java.awt.Color(17, 50, 77));
+        lblSix.setText("jLabel4");
+        jPanel1.add(lblSix, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 240, 380, 29));
+
+        lblFive.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        lblFive.setForeground(new java.awt.Color(17, 50, 77));
+        lblFive.setText("jLabel4");
+        jPanel1.add(lblFive, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 200, 380, 29));
+
+        lblEight.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        lblEight.setForeground(new java.awt.Color(17, 50, 77));
+        lblEight.setText("jLabel4");
+        jPanel1.add(lblEight, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 320, 380, 29));
+
+        lblFour.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        lblFour.setForeground(new java.awt.Color(17, 50, 77));
+        lblFour.setText("jLabel4");
+        jPanel1.add(lblFour, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 160, 380, 29));
+
+        lblThree.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        lblThree.setForeground(new java.awt.Color(17, 50, 77));
+        lblThree.setText("jLabel4");
+        jPanel1.add(lblThree, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 120, 380, 29));
+
+        lblNine.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        lblNine.setForeground(new java.awt.Color(17, 50, 77));
+        lblNine.setText("jLabel4");
+        jPanel1.add(lblNine, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 360, 380, 29));
+
+        lblTen.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        lblTen.setForeground(new java.awt.Color(17, 50, 77));
+        lblTen.setText("jLabel4");
+        jPanel1.add(lblTen, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 400, 380, 29));
+
+        lblSeven.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        lblSeven.setForeground(new java.awt.Color(17, 50, 77));
+        lblSeven.setText("jLabel4");
+        jPanel1.add(lblSeven, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 280, 380, 29));
+
+        jLabel8.setForeground(new java.awt.Color(17, 50, 77));
+        jLabel8.setText("4");
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 170, 41, -1));
+
+        jLabel9.setForeground(new java.awt.Color(17, 50, 77));
+        jLabel9.setText("5");
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, 41, -1));
+
+        jLabel10.setForeground(new java.awt.Color(17, 50, 77));
+        jLabel10.setText("6");
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 250, 41, -1));
+
+        jLabel11.setForeground(new java.awt.Color(17, 50, 77));
+        jLabel11.setText("7");
+        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 290, 41, -1));
+
+        jLabel12.setForeground(new java.awt.Color(17, 50, 77));
+        jLabel12.setText("8");
+        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 330, 41, -1));
+
+        jLabel13.setForeground(new java.awt.Color(17, 50, 77));
+        jLabel13.setText("9");
+        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 370, 41, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 630, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 474, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(stats.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(stats.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(stats.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(stats.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new stats().setVisible(true);
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel lblEight;
+    private javax.swing.JLabel lblFive;
+    private javax.swing.JLabel lblFour;
+    private javax.swing.JLabel lblNine;
+    private javax.swing.JLabel lblOne;
+    private javax.swing.JLabel lblSeven;
+    private javax.swing.JLabel lblSix;
+    private javax.swing.JLabel lblTen;
+    private javax.swing.JLabel lblThree;
+    private javax.swing.JLabel lblTwo;
     // End of variables declaration//GEN-END:variables
 }

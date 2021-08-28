@@ -8,7 +8,9 @@ import javax.swing.Icon;
  */
 public class game extends javax.swing.JFrame {
 
-    public static String [][] dataGame = new String[2][10];
+    public static DataArray mainAccount = new DataArray();
+    String [] dataGame = new String[10];
+    String [] newArray = new String[10];
     
     
     SecureRandom random = new SecureRandom();
@@ -108,9 +110,6 @@ public class game extends javax.swing.JFrame {
         //Getting round
         int ronda = Integer.parseInt(lblRound.getText());
         
-        
-        
-        
         /*Condición según cada ronda
             Según la ronda, almacenar en la matriz la data del jugador 1 y 2
         Jugador 1 = [1][1] Jugador 2 = [2][1] .... etc
@@ -123,17 +122,28 @@ public class game extends javax.swing.JFrame {
         
         */
         
-        dataGame[0][1] = "Q" + lblBetOne.getText() + "  baby!!!" + "       " + "#"+lblRound.getText() ;
-        dataGame[0][2] = "        Soy Rodney";
-        
-        //IT WORKS!!
         //En JInternalFrame haremos esto, en cada label pondremos una concatenación de ambos jugadores en su ronda
-        String saludo = dataGame[0][1] + dataGame[0][2];
+
         
         
         return ronda;
     }
     
+    public String[] gettingStats(){
+        int round = Integer.parseInt(lblRound.getText());
+        
+        return dataGame;
+    }
+    
+    public void showStats(){
+        
+        
+        //Sending all the info
+        new stats(mainAccount.getArray()).setVisible(true);
+        setVisible(false);
+        
+        
+    }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -163,10 +173,17 @@ public class game extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Dice Game");
+
+        jPanel1.setBackground(new java.awt.Color(70, 70, 96));
 
         lblResultOne.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
 
+        lblWinnerOne.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        lblWinnerOne.setForeground(new java.awt.Color(0, 95, 153));
+
         lblBetOne.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        lblBetOne.setForeground(new java.awt.Color(248, 72, 94));
         lblBetOne.setText("100");
 
         lblDiceOne.setIcon(new javax.swing.ImageIcon(getClass().getResource("/caras/dice1.png"))); // NOI18N
@@ -176,6 +193,7 @@ public class game extends javax.swing.JFrame {
         lblDiceTwo.setText("jLabel3");
 
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(248, 72, 94));
         jLabel1.setText("Q");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -193,12 +211,13 @@ public class game extends javax.swing.JFrame {
                         .addGap(68, 68, 68)
                         .addComponent(lblDiceTwo, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(46, 46, 46)
+                        .addGap(87, 87, 87)
+                        .addComponent(lblWinnerOne, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(134, 134, 134)
                         .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblWinnerOne, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblBetOne, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(lblBetOne, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(71, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -212,16 +231,20 @@ public class game extends javax.swing.JFrame {
                 .addComponent(lblResultOne, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(lblWinnerOne, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40)
+                .addGap(33, 33, 33)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblBetOne, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(36, 36, 36))
+                .addGap(43, 43, 43))
         );
 
         lblResultTwo.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
 
+        lblWinnerTwo.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        lblWinnerTwo.setForeground(new java.awt.Color(0, 95, 153));
+
         lblBetTwo.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        lblBetTwo.setForeground(new java.awt.Color(248, 72, 94));
         lblBetTwo.setText("100");
 
         lblDiceThree.setIcon(new javax.swing.ImageIcon(getClass().getResource("/caras/dice3.png"))); // NOI18N
@@ -231,6 +254,7 @@ public class game extends javax.swing.JFrame {
         lblDiceFour.setText("jLabel4");
 
         jLabel2.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(248, 72, 94));
         jLabel2.setText("Q");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -243,21 +267,21 @@ public class game extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 68, Short.MAX_VALUE)
                 .addComponent(lblDiceFour, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(38, 38, 38))
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(159, 159, 159)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(lblBetTwo, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lblResultTwo, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(104, 104, 104))
-            .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(125, 125, 125)
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lblBetTwo, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(77, 77, 77)
-                        .addComponent(lblWinnerTwo, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                        .addComponent(lblResultTwo, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(104, 104, 104))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                        .addComponent(lblWinnerTwo, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(87, 87, 87))))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -277,7 +301,9 @@ public class game extends javax.swing.JFrame {
                 .addGap(43, 43, 43))
         );
 
+        btnExit.setBackground(new java.awt.Color(180, 184, 151));
         btnExit.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        btnExit.setForeground(new java.awt.Color(17, 50, 77));
         btnExit.setText("SALIR");
         btnExit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -285,10 +311,19 @@ public class game extends javax.swing.JFrame {
             }
         });
 
+        btnShowStats.setBackground(new java.awt.Color(180, 184, 151));
         btnShowStats.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        btnShowStats.setForeground(new java.awt.Color(17, 50, 77));
         btnShowStats.setText("MOSTRAR");
+        btnShowStats.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnShowStatsActionPerformed(evt);
+            }
+        });
 
+        btnNewGame.setBackground(new java.awt.Color(180, 184, 151));
         btnNewGame.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        btnNewGame.setForeground(new java.awt.Color(17, 50, 77));
         btnNewGame.setText("NUEVA PARTIDA");
         btnNewGame.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -297,12 +332,16 @@ public class game extends javax.swing.JFrame {
         });
 
         jLabel3.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(246, 209, 103));
         jLabel3.setText("JUGADOR 2");
 
         jLabel4.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(246, 209, 103));
         jLabel4.setText("JUGADOR 1");
 
+        btnPlay.setBackground(new java.awt.Color(180, 184, 151));
         btnPlay.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        btnPlay.setForeground(new java.awt.Color(17, 50, 77));
         btnPlay.setText("JUGAR");
         btnPlay.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -310,8 +349,12 @@ public class game extends javax.swing.JFrame {
             }
         });
 
+        lblRound.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        lblRound.setForeground(new java.awt.Color(246, 209, 103));
         lblRound.setText("0");
 
+        jLabel5.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(246, 209, 103));
         jLabel5.setText("Ronda #");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -401,6 +444,7 @@ public class game extends javax.swing.JFrame {
     }//GEN-LAST:event_btnNewGameActionPerformed
 
     private void btnPlayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlayActionPerformed
+        
         //Getting results from both functions
         int resultOne = playerOne();
         int resultTwo = playerTwo();
@@ -447,7 +491,63 @@ public class game extends javax.swing.JFrame {
         }
         
         
+        if(numRonda == 1){
+                dataGame[0] = lblResultOne.getText()+"    Q"+lblBetOne.getText()
+                                         + "            "+ lblResultTwo.getText() +"   Q"+lblBetTwo.getText();
+                mainAccount.setArray(dataGame, 0);
+        }
+        if(numRonda == 2){
+                dataGame[1] = lblResultOne.getText()+"    Q"+lblBetOne.getText()
+                                         + "          "+ lblResultTwo.getText() +"   Q"+lblBetTwo.getText();
+                mainAccount.setArray(dataGame, 1);
+        }
+        if(numRonda == 3){
+                dataGame[2] = lblResultOne.getText()+"    Q"+lblBetOne.getText()
+                                         + "           "+ lblResultTwo.getText() +"   Q"+lblBetTwo.getText();
+                mainAccount.setArray(dataGame, 2);
+        }
+        if(numRonda == 4){
+                dataGame[3] = lblResultOne.getText()+"    Q"+lblBetOne.getText()
+                                         + "           "+ lblResultTwo.getText() +"   Q"+lblBetTwo.getText();
+                mainAccount.setArray(dataGame, 3);
+        }
+        if(numRonda == 5){
+                dataGame[4] = lblResultOne.getText()+"    Q"+lblBetOne.getText()
+                                         + "           "+ lblResultTwo.getText() +"   Q"+lblBetTwo.getText();
+                mainAccount.setArray(dataGame, 4);
+        }
+        if(numRonda == 6){
+                dataGame[5] = lblResultOne.getText()+"    Q"+lblBetOne.getText()
+                                         + "           "+ lblResultTwo.getText() +"   Q"+lblBetTwo.getText();
+                mainAccount.setArray(dataGame, 5);
+        }
+        if(numRonda == 7){
+                dataGame[6] = lblResultOne.getText()+"    Q"+lblBetOne.getText()
+                                         + "            "+ lblResultTwo.getText() +"   Q"+lblBetTwo.getText();
+                mainAccount.setArray(dataGame, 6);
+        }
+        if(numRonda == 8){
+                dataGame[7] = lblResultOne.getText()+"    Q"+lblBetOne.getText()
+                                         + "           "+ lblResultTwo.getText() +"   Q"+lblBetTwo.getText();
+                mainAccount.setArray(dataGame, 7);
+        }
+        if(numRonda == 9){
+                dataGame[8] = lblResultOne.getText()+"    Q"+lblBetOne.getText()
+                                         + "             "+ lblResultTwo.getText() +"   Q"+lblBetTwo.getText();
+                mainAccount.setArray(dataGame, 8);
+        }
+        if(numRonda == 10){
+                dataGame[9] = lblResultOne.getText()+"    Q"+lblBetOne.getText()
+                                         + "             "+ lblResultTwo.getText() +"   Q"+lblBetTwo.getText();
+                mainAccount.setArray(dataGame, 9);
+        }
+        
+        
     }//GEN-LAST:event_btnPlayActionPerformed
+
+    private void btnShowStatsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnShowStatsActionPerformed
+        showStats();        
+    }//GEN-LAST:event_btnShowStatsActionPerformed
 
     /**
      * @param args the command line arguments
